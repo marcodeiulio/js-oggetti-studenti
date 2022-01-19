@@ -31,12 +31,12 @@ for (let key in student) {
 //* 3.
 const students = [
 	student,
-	secondStudent = {
+	{
 		name: "Giangolo",
 		surname: "Pertugio",
 		age: 19
 	},
-	thirdStudent = {
+	{
 		name: "Terzo",
 		surname: "Arrivato",
 		age: 18
