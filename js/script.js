@@ -15,22 +15,23 @@ const ct = (argument) => console.table(argument);
 
 //#Exercise
 //* 1.
-const student = {
+const studentOfTheYear = {
 	name: "Gigi",
 	surname: "Bettola",
 	age: 66,
 };
-cs(student);
+cs(studentOfTheYear);
 
 //* 2.
-//! Da stampare in pagina
-for (let key in student) {
-	cs(student[key]);
+for (let key in studentOfTheYear) {
+	const keyWord = studentOfTheYear[key];
+	cs(keyWord);
+	document.getElementById(key).innerText = keyWord;
 }
 
 //* 3.
 const students = [
-	student,
+	studentOfTheYear,
 	{
 		name: "Giangolo",
 		surname: "Pertugio",
@@ -63,10 +64,9 @@ cs(fourthStudent);
 const sub = document.getElementById('sub');
 
 sub.addEventListener('click', () => {
-	fourthStudent.name = document.getElementById('name').value;
-	fourthStudent.surname = document.getElementById('surname').value;
-	fourthStudent.age = parseInt(document.getElementById('age').value);
+	fourthStudent.name = document.getElementById('user-name').value;
+	fourthStudent.surname = document.getElementById('user-surname').value;
+	fourthStudent.age = parseInt(document.getElementById('user-age').value);
 	cs(fourthStudent);
 	students.push(fourthStudent);
-	ct(students);
 });
