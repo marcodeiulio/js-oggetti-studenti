@@ -15,16 +15,31 @@ const ct = (argument) => console.table(argument);
 
 //#Exercise
 //* 1.
-const studente = {
+const student = {
 	nome: "Gigi",
 	cognome: "Bettola",
 	eta: 66,
 };
-cs(studente);
+cs(student);
 
 //* 2.
-for (let key in studente) {
-	cs(studente[key]);
+//! Da stampare in pagina
+for (let key in student) {
+	cs(student[key]);
 }
 
 //* 3.
+const students = [
+	student,
+	secondStudent = {
+		nome: "Giangolo",
+		cognome: "Pertugio",
+		eta: 19
+	},
+	thirdStudent = {
+		nome: "Terzo",
+		cognome: "Arrivato",
+		eta: 18
+	}
+];
+ct(students);
