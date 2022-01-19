@@ -16,9 +16,9 @@ const ct = (argument) => console.table(argument);
 //#Exercise
 //* 1.
 const student = {
-	nome: "Gigi",
-	cognome: "Bettola",
-	eta: 66,
+	name: "Gigi",
+	surname: "Bettola",
+	age: 66,
 };
 cs(student);
 
@@ -32,14 +32,19 @@ for (let key in student) {
 const students = [
 	student,
 	secondStudent = {
-		nome: "Giangolo",
-		cognome: "Pertugio",
-		eta: 19
+		name: "Giangolo",
+		surname: "Pertugio",
+		age: 19
 	},
 	thirdStudent = {
-		nome: "Terzo",
-		cognome: "Arrivato",
-		eta: 18
+		name: "Terzo",
+		surname: "Arrivato",
+		age: 18
 	}
 ];
 ct(students);
+
+//* 4.
+for (let k = 0; k < students.length; k++) {
+	cs(`Student n.${k + 1}: ${students[k].name} ${students[k].surname}`);
+}
