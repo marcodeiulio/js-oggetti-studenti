@@ -53,8 +53,20 @@ for (let k = 0; k < students.length; k++) {
 
 const fourthStudent = {};
 
-fourthStudent.name = prompt('Insert your name');
+/* fourthStudent.name = prompt('Insert your name');
 fourthStudent.surname = prompt('Insert your surname');
 fourthStudent.age = prompt('Insert your age');
-
 cs(fourthStudent);
+*/
+
+//* Bonus
+const sub = document.getElementById('sub');
+
+sub.addEventListener('click', () => {
+	fourthStudent.name = document.getElementById('name').value;
+	fourthStudent.surname = document.getElementById('surname').value;
+	fourthStudent.age = parseInt(document.getElementById('age').value);
+	cs(fourthStudent);
+	students.push(fourthStudent);
+	ct(students);
+});
