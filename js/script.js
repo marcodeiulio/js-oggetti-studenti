@@ -48,3 +48,13 @@ ct(students);
 for (let k = 0; k < students.length; k++) {
 	cs(`Student n.${k + 1}: ${students[k].name} ${students[k].surname}`);
 }
+
+//* 5.
+
+const fourthStudent = {};
+
+fourthStudent.name = prompt('Insert your name');
+fourthStudent.surname = prompt('Insert your surname');
+fourthStudent.age = prompt('Insert your age');
+
+cs(fourthStudent);
