@@ -20,12 +20,10 @@ const studentOfTheYear = {
 	surname: "Bettola",
 	age: 66,
 };
-cs(studentOfTheYear);
 
 //* 2.
 for (let key in studentOfTheYear) {
 	const keyWord = studentOfTheYear[key];
-	cs(keyWord);
 	document.getElementById(key).innerText = keyWord;
 }
 
@@ -48,10 +46,12 @@ ct(students);
 //* 4.
 for (let k = 0; k < students.length; k++) {
 	cs(`Student n.${k + 1}: ${students[k].name} ${students[k].surname}`);
+	const li = document.createElement('li');
+	li.innerText = `Student n.${k + 1}: ${students[k].name} ${students[k].surname}`
+	document.getElementById('class').appendChild(li);
 }
 
 //* 5.
-
 const fourthStudent = {};
 
 /* fourthStudent.name = prompt('Insert your name');
@@ -69,4 +69,11 @@ sub.addEventListener('click', () => {
 	fourthStudent.age = parseInt(document.getElementById('user-age').value);
 	cs(fourthStudent);
 	students.push(fourthStudent);
+
+	for (let k = students.length - 1; k < students.length; k++) {
+		cs(`Student n.${k + 1}: ${students[k].name} ${students[k].surname}`);
+		const li = document.createElement('li');
+		li.innerText = `Student n.${k + 1}: ${students[k].name} ${students[k].surname}`
+		document.getElementById('class').appendChild(li);
+	}
 });
